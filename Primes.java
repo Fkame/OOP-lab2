@@ -2,7 +2,10 @@ public class Primes {
 	
 	public static void main (String[] args) {
 		System.out.println("Hint: program is looking over numbers in interval [2, 100] and printing prime numbers");
-		//Primes.launchTestIsPrime();
+		
+		// Команда для тестирования функции на правильность работы
+		// Primes.launchTestIsPrime();
+		
 		int iteration = 0;
 		for (int i = 2; i < 101; i++) {
 			if (Primes.isPrime(i))
@@ -10,6 +13,7 @@ public class Primes {
 		}
 	}
 	
+	// Метод определения, простое число или нет
 	public static boolean isPrime(int n) {
 		// Перевод числа в положительное
 		if (n < 0) n = n * (-1);
@@ -25,7 +29,8 @@ public class Primes {
 		
 		return true;
 	}
-	
+		
+	// Метод проверки работы метода isPrime
 	private boolean testIsPrime() {
 		System.out.println("Testing isPrime method...");
 		int[] testNum = {-6, -1, 0, 1, 2, 3, 4, 5, 22, 31};
@@ -45,6 +50,7 @@ public class Primes {
 		
 	}
 	
+	// Вызов функции проверки и вывод результатов
 	public static void launchTestIsPrime() {
 		Primes primes = new Primes();
 		
