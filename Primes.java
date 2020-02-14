@@ -1,13 +1,8 @@
 public class Primes {
 	
 	public static void main (String[] args) {
-		Primes primes = new Primes();
-		
-		boolean testing = primes.testIsPrime();
-		if (testing) 
-			System.out.println("Method is correct!");
-		else 
-			System.out.println("Method is not correct!");
+		//System.out.println("Hint: program is looking over numbers in interval [2, 100] and printing ");
+		//Primes.launchTestIsPrime();
 	}
 	
 	public static boolean isPrime(int n) {
@@ -20,16 +15,16 @@ public class Primes {
 		// Классификация числа
 		int divider = 1;
 		while (++divider < n) {
-			if (n % divider == 0) return true;
+			if (n % divider == 0) return false;
 		}
 		
-		return false;
+		return true;
 	}
 	
 	private boolean testIsPrime() {
 		System.out.println("Testing isPrime method...");
 		int[] testNum = {-6, -1, 0, 1, 2, 3, 4, 5, 22, 31};
-		boolean[] testAnswers = {true, false ,false, false, false, false, true, false, true, false};
+		boolean[] testAnswers = {false, false ,false, false, true, true, false, true, false, true};
 		
 		boolean isMethodCorrect = true;
 		
@@ -44,5 +39,16 @@ public class Primes {
 		return isMethodCorrect;
 		
 	}
+	
+	public static void launchTestIsPrime() {
+		Primes primes = new Primes();
+		
+		boolean testing = primes.testIsPrime();
+		if (testing) 
+			System.out.println("Method is correct!");
+		else 
+			System.out.println("Method is not correct!");
+	}
+	
 	
 }
