@@ -1,8 +1,13 @@
 public class Primes {
 	
 	public static void main (String[] args) {
-		//System.out.println("Hint: program is looking over numbers in interval [2, 100] and printing ");
+		System.out.println("Hint: program is looking over numbers in interval [2, 100] and printing prime numbers");
 		//Primes.launchTestIsPrime();
+		int iteration = 0;
+		for (int i = 2; i < 101; i++) {
+			if (Primes.isPrime(i))
+				System.out.println(++iteration + " | " + i + " is prime number.");
+		}
 	}
 	
 	public static boolean isPrime(int n) {
